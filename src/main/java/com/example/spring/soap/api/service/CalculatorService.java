@@ -1,7 +1,7 @@
-package com.javatechie.spring.soap.api.service;
+package com.example.spring.soap.api.service;
 
-import com.javatechie.spring.soap.api.calculator.CalculatorRequest;
-import com.javatechie.spring.soap.api.calculator.CalculatorResponse;
+import com.example.spring.soap.api.calculator.CalculatorRequest;
+import com.example.spring.soap.api.calculator.CalculatorResponse;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -20,7 +20,5 @@ public class CalculatorService {
     calculationSoapCalculatorResponse.setDivision(firstNumber / secondNumber);
     calculationSoapCalculatorResponse.setScenarioType(scenarioType);
     return calculationSoapCalculatorResponse;
-
   }
-
 }

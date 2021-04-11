@@ -1,4 +1,4 @@
-package com.javatechie.spring.soap.api;
+package com.example.spring.soap.api;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

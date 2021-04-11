@@ -1,4 +1,4 @@
-package com.javatechie.spring.soap.api;
+package com.example.spring.soap.api;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
