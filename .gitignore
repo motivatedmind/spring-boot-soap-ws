@@ -1,0 +1,22 @@
+ .settings/
+*.sublime-project
+.vscode
+.sfdx
+.project
+.idea/
+.vim-force.com/
+src.zip
+server.key
+target/
+*.iml
+node_modules/
+package-lock.json
+.classpath
+ExecutionResult
+*.log
+.allure
+allure-results
+*.dmp
+*.phd
+javacore.*.txt
+*.trc
