@@ -24,6 +24,7 @@
 				<xsd:element name="subtraction" type="xsd:int"/>
 				<xsd:element name="multiplication" type="xsd:int"/>
 				<xsd:element name="division" type="xsd:int"/>
+				<xsd:element name="scenarioType" type="xsd:string"/>
 			</xsd:sequence>
 		</xsd:complexType>
 	</xsd:element>

@@ -36,7 +36,7 @@ public class SoapWSConfig {
 
 	@Bean
 	public XsdSchema schema() {
-		return new SimpleXsdSchema(new ClassPathResource("loaneligibility.xsd"));
+		return new SimpleXsdSchema(new ClassPathResource("calculator.xsd"));
 	}
 
 }
