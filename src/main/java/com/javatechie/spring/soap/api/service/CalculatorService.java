@@ -1,17 +1,17 @@
 package com.javatechie.spring.soap.api.service;
 
-import com.javatechie.spring.soap.api.loaneligibility.Acknowledgement;
-import com.javatechie.spring.soap.api.loaneligibility.CustomerRequest;
+import com.javatechie.spring.soap.api.loaneligibility.ResponsePOJO;
+import com.javatechie.spring.soap.api.loaneligibility.RequestPOJO;
 import org.springframework.stereotype.Service;
 
 @Service
 public class CalculatorService {
 
-  public Acknowledgement getCalculations(CustomerRequest request) {
+  public ResponsePOJO getCalculations(RequestPOJO request) {
     String scenarioType = request.getScenarioType();
     int firstNumber = request.getFirstNumber();
     int secondNumber = request.getSecondNumber();
-    Acknowledgement calculationSoapResponsePOJO = new Acknowledgement();
+    ResponsePOJO calculationSoapResponsePOJO = new ResponsePOJO();
     calculationSoapResponsePOJO.setFirstNumber(firstNumber);
     calculationSoapResponsePOJO.setSecondNumber(secondNumber);
     calculationSoapResponsePOJO.setAddition(firstNumber + secondNumber);

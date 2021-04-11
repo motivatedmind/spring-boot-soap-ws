@@ -23,10 +23,10 @@ public class SoapWSConfig {
 		return new ServletRegistrationBean<MessageDispatcherServlet>(servlet, "/ws/*");
 	}
 
-	@Bean(name = "loanEligibility")
+	@Bean(name = "calculator")
 	public DefaultWsdl11Definition defaultWsdl11Definition(XsdSchema schema) {
 		DefaultWsdl11Definition defaultWsdl11Definition = new DefaultWsdl11Definition();
-		defaultWsdl11Definition.setPortTypeName("LoanEligibilityindicator");
+		defaultWsdl11Definition.setPortTypeName("CalculatorRequest");
 		defaultWsdl11Definition.setLocationUri("/ws");
 		defaultWsdl11Definition.setTargetNamespace("http://www.javatechie.com/spring/soap/api/loanEligibility");
 		defaultWsdl11Definition.setSchema(schema);

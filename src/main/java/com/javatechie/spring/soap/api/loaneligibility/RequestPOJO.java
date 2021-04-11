@@ -25,13 +25,8 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="logId" type="{http://www.w3.org/2001/XMLSchema}string"/>
  *         &lt;element name="firstNumber" type="{http://www.w3.org/2001/XMLSchema}int"/>
  *         &lt;element name="secondNumber" type="{http://www.w3.org/2001/XMLSchema}int"/>
- *         &lt;element name="addition" type="{http://www.w3.org/2001/XMLSchema}int"/>
- *         &lt;element name="subtraction" type="{http://www.w3.org/2001/XMLSchema}int"/>
- *         &lt;element name="multiplication" type="{http://www.w3.org/2001/XMLSchema}int"/>
- *         &lt;element name="division" type="{http://www.w3.org/2001/XMLSchema}int"/>
  *         &lt;element name="scenarioType" type="{http://www.w3.org/2001/XMLSchema}string"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
@@ -43,52 +38,17 @@ import javax.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
-    "logId",
     "firstNumber",
     "secondNumber",
-    "addition",
-    "subtraction",
-    "multiplication",
-    "division",
     "scenarioType"
 })
-@XmlRootElement(name = "Acknowledgement")
-public class Acknowledgement {
+@XmlRootElement(name = "CalculatorRequest")
+public class RequestPOJO {
 
-    @XmlElement(required = true)
-    protected String logId;
     protected int firstNumber;
     protected int secondNumber;
-    protected int addition;
-    protected int subtraction;
-    protected int multiplication;
-    protected int division;
     @XmlElement(required = true)
     protected String scenarioType;
-
-    /**
-     * Gets the value of the logId property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getLogId() {
-        return logId;
-    }
-
-    /**
-     * Sets the value of the logId property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setLogId(String value) {
-        this.logId = value;
-    }
 
     /**
      * Gets the value of the firstNumber property.
@@ -120,70 +80,6 @@ public class Acknowledgement {
      */
     public void setSecondNumber(int value) {
         this.secondNumber = value;
-    }
-
-    /**
-     * Gets the value of the addition property.
-     * 
-     */
-    public int getAddition() {
-        return addition;
-    }
-
-    /**
-     * Sets the value of the addition property.
-     * 
-     */
-    public void setAddition(int value) {
-        this.addition = value;
-    }
-
-    /**
-     * Gets the value of the subtraction property.
-     * 
-     */
-    public int getSubtraction() {
-        return subtraction;
-    }
-
-    /**
-     * Sets the value of the subtraction property.
-     * 
-     */
-    public void setSubtraction(int value) {
-        this.subtraction = value;
-    }
-
-    /**
-     * Gets the value of the multiplication property.
-     * 
-     */
-    public int getMultiplication() {
-        return multiplication;
-    }
-
-    /**
-     * Sets the value of the multiplication property.
-     * 
-     */
-    public void setMultiplication(int value) {
-        this.multiplication = value;
-    }
-
-    /**
-     * Gets the value of the division property.
-     * 
-     */
-    public int getDivision() {
-        return division;
-    }
-
-    /**
-     * Sets the value of the division property.
-     * 
-     */
-    public void setDivision(int value) {
-        this.division = value;
     }
 
     /**

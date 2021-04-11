@@ -37,19 +37,19 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link CustomerRequest }
+     * Create an instance of {@link RequestPOJO }
      * 
      */
-    public CustomerRequest createCustomerRequest() {
-        return new CustomerRequest();
+    public RequestPOJO createCustomerRequest() {
+        return new RequestPOJO();
     }
 
     /**
-     * Create an instance of {@link Acknowledgement }
+     * Create an instance of {@link ResponsePOJO }
      * 
      */
-    public Acknowledgement createAcknowledgement() {
-        return new Acknowledgement();
+    public ResponsePOJO createAcknowledgement() {
+        return new ResponsePOJO();
     }
 
 }
