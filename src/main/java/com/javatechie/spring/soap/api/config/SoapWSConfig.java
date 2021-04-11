@@ -28,7 +28,7 @@ public class SoapWSConfig {
 		DefaultWsdl11Definition defaultWsdl11Definition = new DefaultWsdl11Definition();
 		defaultWsdl11Definition.setPortTypeName("CalculatorRequest");
 		defaultWsdl11Definition.setLocationUri("/ws");
-		defaultWsdl11Definition.setTargetNamespace("http://www.javatechie.com/spring/soap/api/loanEligibility");
+		defaultWsdl11Definition.setTargetNamespace("http://www.javatechie.com/spring/soap/api/calculator");
 		defaultWsdl11Definition.setSchema(schema);
 		return defaultWsdl11Definition;
 

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-	targetNamespace="http://www.javatechie.com/spring/soap/api/loanEligibility"
-	xmlns:tns="http://www.javatechie.com/spring/soap/api/loanEligibility"
+	targetNamespace="http://www.javatechie.com/spring/soap/api/calculator"
+	xmlns:tns="http://www.javatechie.com/spring/soap/api/calculator"
 	elementFormDefault="qualified">
 
-	<xsd:element name="CustomerRequest">
+	<xsd:element name="CalculatorRequest">
 		<xsd:complexType>
 			<xsd:sequence>
 				<xsd:element name="firstNumber" type="xsd:int"/>
@@ -14,7 +14,7 @@
 		</xsd:complexType>
 	</xsd:element>
 
-	<xsd:element name="Acknowledgement">
+	<xsd:element name="CalculatorResponse">
 		<xsd:complexType>
 			<xsd:sequence>
 				<xsd:element name="logId" type="xsd:string"/>

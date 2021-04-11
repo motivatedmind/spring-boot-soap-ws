@@ -1,25 +1,25 @@
 package com.javatechie.spring.soap.api.service;
 
-import com.javatechie.spring.soap.api.loaneligibility.ResponsePOJO;
-import com.javatechie.spring.soap.api.loaneligibility.RequestPOJO;
+import com.javatechie.spring.soap.api.calculator.CalculatorRequest;
+import com.javatechie.spring.soap.api.calculator.CalculatorResponse;
 import org.springframework.stereotype.Service;
 
 @Service
 public class CalculatorService {
 
-  public ResponsePOJO getCalculations(RequestPOJO request) {
+  public CalculatorResponse getCalculations(CalculatorRequest request) {
     String scenarioType = request.getScenarioType();
     int firstNumber = request.getFirstNumber();
     int secondNumber = request.getSecondNumber();
-    ResponsePOJO calculationSoapResponsePOJO = new ResponsePOJO();
-    calculationSoapResponsePOJO.setFirstNumber(firstNumber);
-    calculationSoapResponsePOJO.setSecondNumber(secondNumber);
-    calculationSoapResponsePOJO.setAddition(firstNumber + secondNumber);
-    calculationSoapResponsePOJO.setSubtraction(firstNumber - secondNumber);
-    calculationSoapResponsePOJO.setMultiplication(firstNumber * secondNumber);
-    calculationSoapResponsePOJO.setDivision(firstNumber / secondNumber);
-    calculationSoapResponsePOJO.setScenarioType(scenarioType);
-    return calculationSoapResponsePOJO;
+    CalculatorResponse calculationSoapCalculatorResponse = new CalculatorResponse();
+    calculationSoapCalculatorResponse.setFirstNumber(firstNumber);
+    calculationSoapCalculatorResponse.setSecondNumber(secondNumber);
+    calculationSoapCalculatorResponse.setAddition(firstNumber + secondNumber);
+    calculationSoapCalculatorResponse.setSubtraction(firstNumber - secondNumber);
+    calculationSoapCalculatorResponse.setMultiplication(firstNumber * secondNumber);
+    calculationSoapCalculatorResponse.setDivision(firstNumber / secondNumber);
+    calculationSoapCalculatorResponse.setScenarioType(scenarioType);
+    return calculationSoapCalculatorResponse;
 
   }
 
