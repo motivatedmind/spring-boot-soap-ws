@@ -20,7 +20,7 @@ public class SoapWSConfig {
 		MessageDispatcherServlet servlet = new MessageDispatcherServlet();
 		servlet.setApplicationContext(context);
 		servlet.setTransformWsdlLocations(true);
-		return new ServletRegistrationBean<MessageDispatcherServlet>(servlet, "/ws/*");
+		return new ServletRegistrationBean<>(servlet, "/ws/*");
 	}
 
 	@Bean(name = "loanEligibility")

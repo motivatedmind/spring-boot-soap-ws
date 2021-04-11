@@ -1,18 +1,27 @@
 package com.javatechie.spring.soap.api.service;
 
-import java.util.List;
-
+import com.javatechie.spring.soap.api.loaneligibility.CalculationSoapRequestPOJO;
+import com.javatechie.spring.soap.api.loaneligibility.CalculationSoapResponsePOJO;
 import org.springframework.stereotype.Service;
-
-import com.javatechie.spring.soap.api.loaneligibility.Acknowledgement;
-import com.javatechie.spring.soap.api.loaneligibility.CustomerRequest;
 
 @Service
 public class LoanEligibilityService {
 
-	public Acknowledgement checkLoanEligibility(CustomerRequest request) {
-		Acknowledgement acknowledgement = new Acknowledgement();
-		List<String> mismatchCriteriaList = acknowledgement.getCriteriaMismatch();
+	public CalculationSoapResponsePOJO checkLoanEligibility(CalculationSoapRequestPOJO request) {
+		String scenarioType = request.getScenarioType();
+		int firstNumber = request.getFirstNumber();
+		int secondNumber = request.getFirstNumber();
+		CalculationSoapResponsePOJO calculationSoapResponsePOJO = new CalculationSoapResponsePOJO();
+		calculationSoapResponsePOJO.setFirstNumber(firstNumber);
+		calculationSoapResponsePOJO.setSecondNumber(secondNumber);
+		calculationSoapResponsePOJO.setAddition(firstNumber + secondNumber);
+		calculationSoapResponsePOJO.setSubtraction(firstNumber - secondNumber);
+		calculationSoapResponsePOJO.setMultiplication(firstNumber * secondNumber);
+		calculationSoapResponsePOJO.setDivision(firstNumber / secondNumber);
+		return calculationSoapResponsePOJO;
+
+		//AcknowledgementOld acknowledgement = new AcknowledgementOld();
+		/*List<String> mismatchCriteriaList = acknowledgement.getCriteriaMismatch();
 
 		if (!(request.getAge() > 30 && request.getAge() <= 60)) {
 			mismatchCriteriaList.add("Person age should in between 30 to 60");
@@ -31,8 +40,8 @@ public class LoanEligibilityService {
 			acknowledgement.setApprovedAmount(500000);
 			acknowledgement.setIsEligible(true);
 			mismatchCriteriaList.clear();
-		}
-		return acknowledgement;
+		}*/
+		//return acknowledgement;
 
 	}
 
